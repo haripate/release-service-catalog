@@ -179,7 +179,7 @@ spec:
 
   steps:
     - name: extract-artifacts
-      image: quay.io/konflux-ci/release-service-utils@sha256:5546fa78d3c88d7b6a2e8cff8902f7757f00541d0bbaf113b9f293133894afa3
+      image: quay.io/konflux-ci/release-service-utils@sha256:e71524dc1d3b5c3370933e9528a782053cfa04ab66b13a5f94ada1244f7cc7ca
       securityContext:
         runAsUser: 1001
       computeResources:
@@ -403,7 +403,7 @@ spec:
           fi
         done
     - name: push-unsigned-using-oras
-      image: quay.io/konflux-ci/release-service-utils@sha256:5546fa78d3c88d7b6a2e8cff8902f7757f00541d0bbaf113b9f293133894afa3
+      image: quay.io/konflux-ci/release-service-utils@sha256:e71524dc1d3b5c3370933e9528a782053cfa04ab66b13a5f94ada1244f7cc7ca
       computeResources:
         limits:
           memory: 512Mi
@@ -603,7 +603,7 @@ spec:
           fi
         done
     - name: sign-mac-binaries
-      image: quay.io/konflux-ci/release-service-utils@sha256:5546fa78d3c88d7b6a2e8cff8902f7757f00541d0bbaf113b9f293133894afa3
+      image: quay.io/konflux-ci/release-service-utils@sha256:e71524dc1d3b5c3370933e9528a782053cfa04ab66b13a5f94ada1244f7cc7ca
       computeResources:
         limits:
           memory: 512Mi
@@ -781,7 +781,7 @@ spec:
           fi
         done
     - name: sign-windows-binaries
-      image: quay.io/konflux-ci/release-service-utils@sha256:5546fa78d3c88d7b6a2e8cff8902f7757f00541d0bbaf113b9f293133894afa3
+      image: quay.io/konflux-ci/release-service-utils@sha256:e71524dc1d3b5c3370933e9528a782053cfa04ab66b13a5f94ada1244f7cc7ca
       computeResources:
         limits:
           memory: 512Mi
@@ -945,7 +945,7 @@ spec:
             Remove-Item -LiteralPath ${WINDOWS_SIGNING_SCRIPT_PATH} -Force"
         done
     - name: generate-checksums
-      image: quay.io/konflux-ci/release-service-utils@sha256:5546fa78d3c88d7b6a2e8cff8902f7757f00541d0bbaf113b9f293133894afa3
+      image: quay.io/konflux-ci/release-service-utils@sha256:e71524dc1d3b5c3370933e9528a782053cfa04ab66b13a5f94ada1244f7cc7ca
       computeResources:
         limits:
           memory: 512Mi
@@ -1157,7 +1157,7 @@ spec:
         done
 
     - name: compress-artifacts
-      image: quay.io/konflux-ci/release-service-utils@sha256:5546fa78d3c88d7b6a2e8cff8902f7757f00541d0bbaf113b9f293133894afa3
+      image: quay.io/konflux-ci/release-service-utils@sha256:e71524dc1d3b5c3370933e9528a782053cfa04ab66b13a5f94ada1244f7cc7ca
       computeResources:
         limits:
           memory: 512Mi
@@ -1346,7 +1346,7 @@ spec:
         echo "$SNAPSHOT_JSON" > /shared/snapshot.json
 
     - name: push-artifacts
-      image: quay.io/konflux-ci/release-service-utils@sha256:5546fa78d3c88d7b6a2e8cff8902f7757f00541d0bbaf113b9f293133894afa3
+      image: quay.io/konflux-ci/release-service-utils@sha256:e71524dc1d3b5c3370933e9528a782053cfa04ab66b13a5f94ada1244f7cc7ca
       computeResources:
         limits:
           memory: 512Mi
@@ -1683,7 +1683,7 @@ spec:
         fi
 
     - name: build-advisory-checksum-map
-      image: quay.io/konflux-ci/release-service-utils@sha256:653b4782f0693c031a5d1327c026e6895d90b8126d51d8a3d07ffe940f6721fd
+      image: quay.io/konflux-ci/release-service-utils@sha256:e71524dc1d3b5c3370933e9528a782053cfa04ab66b13a5f94ada1244f7cc7ca
       computeResources:
         limits:
           memory: 128Mi
